@@ -1,23 +1,16 @@
 import './App.css';
-import React, { Component } from 'react'
+import React from 'react'
 import NavBar from './components/NavBar'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <NavBar />
-      </div>
-    )
-  }
-
+const App = () => {
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NavBar />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
