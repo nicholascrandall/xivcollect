@@ -1,10 +1,10 @@
 import NavBar from './NavBar'
 
-export default function Home() {
+export default function Item() {
     return (
         <div>
             <NavBar />
-            <h2>Welcome to the home page!</h2>
+            <h2>Item Show Page</h2>
         </div>
     )
 }
