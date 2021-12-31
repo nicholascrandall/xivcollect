@@ -1,4 +1,4 @@
-const Rarity = ({ val }) => {
+const quality = (val) => {
     switch (val) {
         case 1:
             return "white";
@@ -14,9 +14,10 @@ const Rarity = ({ val }) => {
 }
 
 export default function Rarity(props) {
+    console.log(props);
     return (
         <>
-            <Rarity val="1" />
+            <p>{quality(1)}</p>
         </>
     )
 }

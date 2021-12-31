@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import NavBar from './NavBar'
+import Rarity from './Rarity'
 
 export default function Item() {
     const [item, setItem] = useState("")
@@ -37,9 +38,8 @@ export default function Item() {
                 <p>{item.Name} ID: {item.ID} </p>
                 <p>Job(s): {item.ClassJobCategory.Name} </p>
                 <p>{item.BaseParam0.Name}: {item.BaseParamValue0} </p>
+                <Rarity val={item.Rarity} />
             </div>
         )
     }
     }
-
-    
