@@ -42,6 +42,24 @@
   justify-content: center;
   background-color: #232c36;
   height: 80px;
+  width: 100%;
   white-space: nowrap;
   color: white;
 }
+
+.navBar h1 {
+  width: 200px;
+  height: 50px;
+}
+
+.notFound {
+  width: 100%;
+}
+
+.notFound > * {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+

@@ -1,10 +1,16 @@
 import NavBar from './NavBar'
+import { Link } from 'react-router-dom'
 
 export default function NotFound() {
     return (
         <div>
             <NavBar />
-            <h2>PAGE NOT FOUND: Return to Start</h2>
+            <div className="notFound">
+                <h2>Page Not Found</h2>
+                <p>
+                    <Link to="/">Return Home</Link>
+                </p>
+            </div>
         </div>
     )
 }
