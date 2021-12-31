@@ -23,11 +23,23 @@ export default function Item() {
 
     console.log(item)
 
-    return (
-        <div>
-            <NavBar />
-            <h2>Item Show Page</h2>
-            <p>{item.Name}</p>
-        </div>
-    )
-}
+    if (item.length < 1) {
+        return (
+            <div>
+                <h1>Page is Loading</h1>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <NavBar />
+                <h2>Item Show Page</h2>
+                <p>{item.Name} ID: {item.ID} </p>
+                <p>Job(s): {item.ClassJobCategory.Name} </p>
+                <p>{item.BaseParam0.Name}: {item.BaseParamValue0} </p>
+            </div>
+        )
+    }
+    }
+
+    
