@@ -12,7 +12,7 @@ export default function Item() {
                 const response = await fetch(url, {mode: 'cors'})
                 const json = await response.json()
                 console.log(json);
-                // setItem(json.item.etc)
+                setItem(json)
             } catch (error) {
                 console.log("error", error);
             }
@@ -27,6 +27,7 @@ export default function Item() {
         <div>
             <NavBar />
             <h2>Item Show Page</h2>
+            <p>{item.Name}</p>
         </div>
     )
 }
