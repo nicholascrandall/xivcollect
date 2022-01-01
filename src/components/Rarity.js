@@ -14,10 +14,9 @@ const quality = (val) => {
 }
 
 export default function Rarity(props) {
-    console.log(props);
     return (
         <>
-            <p>{quality(1)}</p>
+            <p>{quality(props.val)}</p>
         </>
     )
 }
