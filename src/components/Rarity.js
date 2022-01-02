@@ -18,13 +18,13 @@ const color = (val) => {
         case 1:
             return "Black";
         case 2:
-            return "#70c081";
+            return "#20bc70";
         case 3:
-            return "Blue";
+            return "#2673c5";
         case 4:
-            return "#513492";
+            return "#7641af";
         case 7:
-            return "#ff68c1";
+            return "#ff65ad";
     }
 }
 
