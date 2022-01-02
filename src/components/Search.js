@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 export default function Search() {
-    const [itemID, setItemID] = useState(1675)
+    const [itemID, setItemID] = useState("")
     const [searched, setSearched] = useState(false)
 
 
@@ -17,8 +17,15 @@ export default function Search() {
     }
 
     if (searched === true) {
-        return <div><h2 style={{color: "red"}}>SEARCHED</h2></div>
+        return (
+            <div>
+                <h2 style={{color: "red"}}>SEARCHED</h2>
+                <p>{itemID}</p>
+            </div>
+        )
     }
+
+    console.log(itemID)
 
     return (
         <div className="searchContainer">
