@@ -1,18 +1,17 @@
 import { useState } from 'react'
 
-export default function Search() {
+export default function Search(props) {
     const [itemID, setItemID] = useState("")
     const [searched, setSearched] = useState(false)
-
 
     const handleChange = (event) => {
         event.persist();
         setItemID(event.target.value)
-        console.log(itemID)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        props.setSearchTerm(itemID)
         setSearched(true)
     }
 
@@ -25,7 +24,7 @@ export default function Search() {
         )
     }
 
-    console.log(itemID)
+    console.log(`Item ID: ${itemID}`)
 
     return (
         <div className="searchContainer">
