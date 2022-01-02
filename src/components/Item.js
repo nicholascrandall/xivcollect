@@ -7,6 +7,10 @@ export default function Item() {
 
     useEffect(() => {
         const url = "https://xivapi.com/item/1675"
+        // 34885
+        // 1675
+        // 19047
+        // 1900
 
         const fetchData = async() => {
             try {
@@ -22,8 +26,6 @@ export default function Item() {
         fetchData()
     }, [])
 
-    console.log(item)
-
     if (item.length < 1) {
         return (
             <div>
@@ -34,10 +36,13 @@ export default function Item() {
         return (
             <div>
                 <NavBar />
-                <h2>Item Show Page</h2>
-                <p>{item.Name} ID: {item.ID} </p>
+                <h2>{item.Name} ID: {item.ID} </h2>
                 <p>Job(s): {item.ClassJobCategory.Name} </p>
-                <p>{item.BaseParam0.Name}: {item.BaseParamValue0} </p>
+
+                {/* <ul>
+                    <li>{item.Stats.DirectHitRate.NQ}</li>
+                </ul> */}
+
                 <Rarity val={item.Rarity} />
             </div>
         )
