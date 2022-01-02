@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import NavBar from './NavBar'
 import Rarity from './Rarity'
+import Stats from './Stats'
 
 export default function Item() {
     const [item, setItem] = useState("")
@@ -38,13 +39,9 @@ export default function Item() {
                 <NavBar />
                 <h2>{item.Name} ID: {item.ID} </h2>
                 <p>Job(s): {item.ClassJobCategory.Name} </p>
-
-                {/* <ul>
-                    <li>{item.Stats.DirectHitRate.NQ}</li>
-                </ul> */}
-
+                <Stats stats={item.Stats} />
                 <Rarity val={item.Rarity} />
             </div>
         )
     }
-    }
+}

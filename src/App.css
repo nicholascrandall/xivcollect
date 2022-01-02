@@ -73,3 +73,20 @@ a {
   margin-right: 5px;
 }
 
+.statsContainer {
+  text-align: center;
+}
+
+.stats {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.stats ul {
+  list-style: none;
+}
+
+.stats h3 {
+  padding-left: 40px;
+}
