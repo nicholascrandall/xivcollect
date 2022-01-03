@@ -1,39 +1,32 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Search(props) {
-    const [itemID, setItemID] = useState("")
+    const [searchTerm, setSearchTerm] = useState("")
     const [searched, setSearched] = useState(false)
+    let navigate = useNavigate();
 
     const handleChange = (event) => {
         event.persist();
-        setItemID(event.target.value)
+        setSearchTerm(event.target.value)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.setSearchTerm(itemID)
-        setSearched(true)
+        props.setSearchTerm(searchTerm)
+        navigate("/search")
     }
 
-    if (searched === true) {
-        return (
-            <div>
-                <h2 style={{color: "red"}}>SEARCHED</h2>
-                <p>{itemID}</p>
-            </div>
-        )
-    }
-
-    console.log(`Item ID: ${itemID}`)
+    console.log(`Search Term: ${searchTerm}`)
 
     return (
         <div className="searchContainer">
             <h2>Search Bar goes here</h2>
             <form onSubmit={handleSubmit}>
                 <input
-                type="number"
+                type="search"
                 className="searchInput"
-                value={itemID}
+                value={searchTerm}
                 placeholder="Enter a Final Fantasy XIV Item ID"
                 onChange={handleChange}
                 />

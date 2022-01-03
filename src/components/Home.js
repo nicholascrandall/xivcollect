@@ -6,7 +6,7 @@ export default function Home() {
     const [searchTerm, setSearchTerm] = useState("")
 
     console.log(`Search Term: ${searchTerm}`)
-    
+
     return (
         <div>
             <NavBar />
