@@ -136,7 +136,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.click {
+.results {
   font-size: 20px;
   cursor: pointer;
   text-decoration: underline;

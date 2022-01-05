@@ -26,8 +26,9 @@ export default function Results(props) {
     let data = []
 
     const handleClick = (event) => {
-        console.log(event.target.__reactFiber$wavb4gcp48.key)
-        navigate(`/item/${event.target.__reactFiber$wavb4gcp48.key}`)
+        console.log(event)
+        console.log(event.target.childNodes[2].nodeValue)
+        navigate(`/item/${event.target.childNodes[2].nodeValue}`)
     }
 
     if (results.length < 1) {
@@ -46,9 +47,9 @@ export default function Results(props) {
             <div>
                 <h1>Search Results (up to 20)</h1>
                 <div className="stats">
-                    <ul>
+                    <ul className="results">
                         {data.map((item) => (
-                            <li className='click' key={item.ID} onClick={handleClick}>{item.Name} ({item.ID})</li>
+                            <li key={item.ID} onClick={handleClick}>{item.Name} ({item.ID})</li>
                         ))}
                     </ul>
                 </div>

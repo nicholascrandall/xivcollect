@@ -8,8 +8,6 @@ export default function Item() {
     const [item, setItem] = useState("")
     let location = useLocation();
 
-    console.log(location.pathname)
-
     useEffect(() => {
         const url = `https://xivapi.com${location.pathname}`
 
