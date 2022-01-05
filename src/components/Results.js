@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Results(props) {
     const [results, setResults] = useState("")
+    let navigate = useNavigate();
 
     useEffect(() => {
         const url = `https://xivapi.com/search?string=${props.term}`
@@ -25,6 +27,7 @@ export default function Results(props) {
 
     const handleClick = (event) => {
         console.log(event.target.__reactFiber$wavb4gcp48.key)
+        navigate(`/item/${event.target.__reactFiber$wavb4gcp48.key}`)
     }
 
     if (results.length < 1) {
@@ -45,7 +48,7 @@ export default function Results(props) {
                 <div className="stats">
                     <ul>
                         {data.map((item) => (
-                            <li key={item.ID} onClick={handleClick}>{item.Name} ({item.ID})</li>
+                            <li className='click' key={item.ID} onClick={handleClick}>{item.Name} ({item.ID})</li>
                         ))}
                     </ul>
                 </div>
