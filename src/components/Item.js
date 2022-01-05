@@ -2,16 +2,16 @@ import { useEffect, useState } from 'react'
 import NavBar from './NavBar'
 import Rarity from './Rarity'
 import Stats from './Stats'
+import { useLocation } from 'react-router-dom'
 
 export default function Item() {
     const [item, setItem] = useState("")
+    let location = useLocation();
+
+    console.log(location.pathname)
 
     useEffect(() => {
-        const url = "https://xivapi.com/item/1675"
-        // 34885
-        // 1675
-        // 19047
-        // 1900
+        const url = `https://xivapi.com${location.pathname}`
 
         const fetchData = async() => {
             try {

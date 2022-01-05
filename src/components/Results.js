@@ -38,13 +38,13 @@ export default function Results(props) {
         )
     } else {
 
-        for (let i = 0; i < 10 && i < results.Results.length; i++) {
+        for (let i = 0; i < 20 && i < results.Results.length; i++) {
             data.push(results.Results[i])
         }
 
         return (
             <div>
-                <h1>Search Results</h1>
+                <h1>Search Results (up to 20)</h1>
                 <div className="stats">
                     <ul>
                         {data.map((item) => (
