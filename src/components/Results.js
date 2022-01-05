@@ -21,6 +21,12 @@ export default function Results(props) {
         fetchData()
     }, [])
 
+    let data = []
+
+    const handleClick = (event) => {
+        console.log(event.target.__reactFiber$wavb4gcp48.key)
+    }
+
     if (results.length < 1) {
         return (
             <div>
@@ -28,8 +34,22 @@ export default function Results(props) {
             </div>
         )
     } else {
+
+        for (let i = 0; i < 10 && i < results.Results.length; i++) {
+            data.push(results.Results[i])
+        }
+
         return (
-            <h1>Search Results</h1>
+            <div>
+                <h1>Search Results</h1>
+                <div className="stats">
+                    <ul>
+                        {data.map((item) => (
+                            <li key={item.ID} onClick={handleClick}>{item.Name} ({item.ID})</li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
         )
     }
 }
