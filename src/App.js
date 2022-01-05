@@ -7,7 +7,7 @@ import NotFound from './components/NotFound'
 const App = () => {
   return(
     <div className='App'>
-      <BrowserRouter>
+      <BrowserRouter basename="/xivcollect/">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/item/:id" element={<Item />} />
