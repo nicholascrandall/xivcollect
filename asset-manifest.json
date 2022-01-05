@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/xivcollect/static/css/main.c197a181.css",
-    "main.js": "/xivcollect/static/js/main.0b7e75f3.js",
+    "main.js": "/xivcollect/static/js/main.370625e0.js",
     "static/js/787.128b9833.chunk.js": "/xivcollect/static/js/787.128b9833.chunk.js",
     "index.html": "/xivcollect/index.html",
     "main.c197a181.css.map": "/xivcollect/static/css/main.c197a181.css.map",
-    "main.0b7e75f3.js.map": "/xivcollect/static/js/main.0b7e75f3.js.map",
+    "main.370625e0.js.map": "/xivcollect/static/js/main.370625e0.js.map",
     "787.128b9833.chunk.js.map": "/xivcollect/static/js/787.128b9833.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c197a181.css",
-    "static/js/main.0b7e75f3.js"
+    "static/js/main.370625e0.js"
   ]
 }
