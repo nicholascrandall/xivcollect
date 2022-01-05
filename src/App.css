@@ -137,5 +137,7 @@ input[type=number] {
 }
 
 .click {
-  color: blue;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: underline;
 }
